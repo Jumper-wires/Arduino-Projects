@@ -44,5 +44,5 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   delay(5000);
-  printAsMorse("hello motherfuckers");                  
+  printAsMorse("This is my message");                  
 }
