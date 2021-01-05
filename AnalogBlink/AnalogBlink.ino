@@ -6,18 +6,14 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  blinkAnalog();
-}
-
-void blinkAnalog(){
-  analogOutput(0);
-}
-void analogOutput(int n){
+  static int n = 0;
   if(n==255)
     return;
-    analogWrite(9,n);
-    delay(5);
-    analogOutput(n+1);
-    analogWrite(9,n);
-    delay(5);
+  n++;
+  analogWrite(9,n);
+  delay(5);
+  loop();
+  n--;
+  analogWrite(9,n);
+  delay(5);
 }
