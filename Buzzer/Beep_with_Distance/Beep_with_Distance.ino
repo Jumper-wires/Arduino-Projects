@@ -1,5 +1,19 @@
 // Buzzer Beeps faster as you get close to it!
 
+/*  PIN Connections
+# Ultrasound Sensor
+   # Vcc  --> 5V
+   # Trig --> 12
+   # Echo --> 13
+   # GND  --> GND
+
+# Buzzer
+  Positive - 8
+  Negative - GND (through resistor)
+*/
+//---------------------------------------------
+
+
 const int buzzerPin = 8;
 const int trigPin = 12;
 const int echoPin = 13;
