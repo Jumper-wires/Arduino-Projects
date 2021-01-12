@@ -10,12 +10,12 @@
 
  */
  
-const int trigPin = 10;
+const int trigPin = 12;
 const int echoPin = 8;
 
 const int ledOutputPin = 6; // Port to which led is connected
 
-const int speedOfSound = 0.0343;
+//const int speedOfSound = 0.0343;
 
 void setup() {
   Serial.begin(9600);
@@ -35,7 +35,7 @@ void loop() {
   digitalWrite(trigPin, LOW);
 
   float duration = pulseIn(echoPin, HIGH); // duration between time of sending the pulse and receiving it back
-  float distance = (speedOfSound * duration)/2;  // distance between the object and the sensor
+  float distance = (0.0343* duration)/2;  // distance between the object and the sensor
 
   // varying the brghtness based upon distance
   int brightness;
@@ -47,5 +47,5 @@ void loop() {
   Serial.print("Distance: ");
   Serial.println(distance);
 
-  delay(10);
+  delay(100);
 }

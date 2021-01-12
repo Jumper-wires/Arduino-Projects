@@ -15,15 +15,22 @@ void setup() {
 }
 
 // the loop function runs over and over again forever
-void loop() {   
+void loop() {  
   delay(2000);
-  beepAsMorse("this is my message");    
+  String msg; 
+  Serial.print("Enter your message: ");
+  while(Serial.available()==0){
+  }
+  msg = Serial.readStringUntil('\n');
+  delay(500);
+  Serial.println(msg);
+  delay(100);
+  beepAsMorse(msg); 
   Serial.println();
-  Serial.println("####################################################################################################################################################");
-  delay(7000);
+  Serial.println();
 }
 
-void beepAsMorse(char str[]){
+void beepAsMorse(String str){
   char arr1[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0'};
   char *arr2[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"};
   int i,j;
