@@ -1,9 +1,11 @@
-// This is a program to control output using 2 claps
-// The output at pin 13 will be HIGH when sound sensor detects any sound
-// Just connect pin 12 of the arduino to sound sensor's digital Out pin, and calibrate the potentiometer to detect claps, eleminating background noises
-
+/*
+ Program to control output using 2 claps
+ The output at pin 13 will be HIGH when sound sensor detects any sound
+ Just connect pin 12 of the arduino to sound sensor's digital Out pin,
+ and calibrate the potentiometer to detect claps, eleminating background noises, after uploading uour sketch
+*/
 const int outputPin = 13;
-const int soundPin = 12
+const int soundPin = 12;
 
 bool state = false;
 void setup() {
