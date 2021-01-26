@@ -1,6 +1,6 @@
 # Arduino Projects
 
-This repository contains some programs and small projects made with **Arduino.**
+This repository contains some cool projects made with **Arduino.**
 
 ---
 
